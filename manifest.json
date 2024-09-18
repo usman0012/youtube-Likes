@@ -1,8 +1,8 @@
   {
    "manifest_version": 3,
-   "name": "Facebook Image Downloader",
+   "name": "Youtube Likes",
    "version": "1.0",
-   "description": "Downloads images from specified Facebook posts.",
+   "description": "",
    "permissions": [
      "activeTab",
      "downloads",
@@ -18,10 +18,7 @@
    "content_scripts": [
      {
        "matches": [
-        "https://facebook.com/*",
-        "https://www.facebook.com/*",
-        "https://www.web.facebook.com/*",
-         "https://web.facebook.com/*"
+        "https://www.youtube.com/*"
       ],
        "js": ["content.js"]
      }
