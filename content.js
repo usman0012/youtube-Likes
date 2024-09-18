@@ -195,6 +195,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 });
 
 function scrollDownWithDelay() {
+  document.querySelector('video').pause();
   const scrollAmount = 200; // Amount to scroll (in pixels)
   const delay = 5000; // 5 seconds
 
