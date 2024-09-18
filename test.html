@@ -1,0 +1,269 @@
+<html>
+    <head>
+        
+    </head>
+    <style>
+ 
+
+
+ul {
+	list-style:none;
+	margin:0; 
+	padding:0;
+	width:300px;
+	margin:0 auto;
+	-moz-box-shadow: 0 0 5px #111;
+	-webkit-box-shadow: 0 0 5px #111;
+	box-shadow: 0 0 5px #111;
+}
+
+ul li label {
+	background: #575e63; /* fallback colour */
+	border-top:1px solid #878e98;
+	border-bottom:1px solid #33373d;
+	color: #fff;
+	text-shadow: 0 1px 1px #000;
+	letter-spacing: 0.09em;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#575e63), to(#3f4347));
+	background: -webkit-linear-gradient(top, #575e63, #3f4347);
+	background: -moz-linear-gradient(top, #575e63, #3f4347);
+	background: -ms-linear-gradient(top, #575e63, #3f4347);
+	background: -o-linear-gradient(top, #575e63, #3f4347);
+}
+
+
+
+ul li label {
+	display:block;
+	padding:12px;
+	width:300px;
+}
+
+
+ul li label:hover {
+	background: #566f82; /* fallback colour */
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#566f82), to(#3e505e));
+	background: -webkit-linear-gradient(top, #566f82, #3e505e);
+	background: -moz-linear-gradient(top, #566f82, #3e505e);
+	background: -ms-linear-gradient(top, #566f82, #3e505e);
+	background: -o-linear-gradient(top, #566f82, #3e505e);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+    </style>
+    <body>
+        <ul>
+            <li class="block">
+                <label for="item1" ><i aria-hidden="true" ></i> Friends</label>
+            </li>  
+
+			
+
+            <div class="col-md-2 text-end" style="width: 20%;padding-left: 35px;">
+                <i data-bs-toggle="modal"  style="cursor: pointer;" class="fas fa-cog setting-tab"></i>
+                <i data-bs-toggle="modal" style="cursor: pointer;" class="fas fa-trash delete-tab"></i>
+                <!-- <i data-bs-toggle="modal" data-bs-target="#edit_indexname_popup" style="cursor: pointer;" class="fas fa-cog setting-tab"></i>
+                <i data-bs-toggle="modal" data-bs-target="#delete_group_popup" style="cursor: pointer;" class="fas fa-trash delete-tab"></i> -->
+              </div> 
+
+			
+
+        </ul>
+
+		<script>
+			// $(document).on('change', '#fb_indexer_category_select', function () {
+//   var selectedOptions = $('#fb_indexer_category_select option:selected');
+//   var divElement = $('#my-input');
+  
+//   selectedOptions.each(function (index, option) {
+//     var optionText = $(option).text().trim();
+//     var optionExists = false;
+
+//     // Check if the option text already exists in the divElement
+//     divElement.find('.option-container').each(function () {
+//       if ($(this).text().trim() === optionText) {
+//         optionExists = true;
+//         return false;
+//       }
+//     });
+
+//     if (!optionExists) {
+//       // Create the option container and append it to the divElement
+//       var crossButton = $('<span class="remove-option" style="font-size: 10px;color:white;font-weight: 800;">X</span>').css('color', 'black');
+//       var optionContainer = $('<li class="option-container" style="display: flex;color:white;gap: 5px;align-items: center;width: auto;background-color: #2196F3;border: 2px solid gray;border-radius: 10px;padding: 8px;font-size:12px;"></li>').css({
+//         display: 'flex',
+//         gap: '5px',
+//         alignItems: 'center'
+//       });
+
+//       crossButton.hover(function () {
+//         $(this).css('color', 'red');
+//       }, function () {
+//         $(this).css('color', 'white');
+//       });
+
+//       optionContainer.append(crossButton);
+//       optionContainer.append($('<span>').text(optionText));
+//       divElement.append(optionContainer);
+
+//       if ($(option).is(':selected')) {
+//         $('#fb_indexer_category_select').css('visibility', 'hidden');
+//       }
+//     }
+//   });
+// });
+
+
+
+
+
+
+
+// $(document).on('change', '#fb_indexer_category_select', function () {
+  
+//   var selectedOptions = $('#fb_indexer_category_select option:selected');
+ 
+//   var divElement = $('#my-input');
+
+//   selectedOptions.each(function (index, option) {
+//     var optionValue = $(option).val();
+//     var optionText = $(option).text().trim(); // Get the text of the selected option
+//     var optionExists = false;
+
+//     divElement.find('.option-container').each(function () {
+//       if ($(this).text().trim() === optionText) { // Compare with optionText instead of optionValue
+//         optionExists = true;
+//         return false;
+//       }
+//     });
+
+//     if (!optionExists) {
+//       if (divElement.find('option[value="' + optionValue + '"]').length === 0) {
+//         var crossButton = $('<span class="remove-option" style="font-size: 10px;color:white;font-weight: 800;" >X</span>').css('color', 'black');
+//         var optionContainer = $('<li class="option-container" style="display: flex;color:white;gap: 5px;align-items: center;width: auto;background-color: #2196F3;border: 2px solid gray;border-radius: 10px;padding: 8px;font-size:12px; "></li>').css({
+//           display: 'flex',
+//           gap:'5px',
+//           alignItems: 'center'
+//         });
+
+//         crossButton.hover(function () {
+//           $(this).css('color', 'red');
+//         }, function () {
+//           $(this).css('color', 'white');
+//         });
+//         optionContainer.append(crossButton);
+//         optionContainer.append($('<span>').text(optionText)) // Append the option text as a list item
+//         divElement.append(optionContainer);
+
+//         // Check if the selected option matches the current option
+//         if ($(option).is(':selected')) {
+//           $('#fb_indexer_category_select').css('visibility', 'hidden');
+//         }
+//       }
+//     }
+//   });
+// });// $(document).on('change', '#fb_indexer_category_select', function() {
+//   alert("Category Change");
+
+//   var selectedOptions = $('#fb_indexer_category_select option:selected');
+//   alert("Category change selected");
+
+//   var divElement = $('#my-input');
+
+//   selectedOptions.each(function(index, option) {
+//     var clonedOption = $(option).clone();
+//     divElement.append(clonedOption);
+//   });
+// });
+// // Change event handler for fb_indexer_category_select
+// $(document).on('change', '#fb_indexer_category_select', function () {
+//   var selectedOption = $(this).find('option:selected');
+//   var optionText = selectedOption.text().trim();
+//   var divElement = $('#my-input');
+
+//   var optionIndex = selectedOptionsArray.indexOf(optionText);
+//   if (optionIndex !== -1) {
+//     selectedOptionsArray.splice(optionIndex, 1);
+//   } else {
+//     selectedOptionsArray.push(optionText);
+//   }
+//   var selectedOptionsText = selectedOptionsArray.join(', ');
+
+//   // Check if option container already exists
+//   var optionContainerExists = false;
+//   divElement.find('.option-container').each(function () {
+//     if ($(this).find('span').text().trim() === optionText) {
+//       optionContainerExists = true;
+//       return false;
+//     }
+//   });
+//   if (optionContainerExists) {
+//     // Remove the corresponding option container if it is found
+//     divElement.find('.option-container').filter(function () {
+//       return $(this).find('span').text().trim() === optionText;
+//     }).remove();
+//   } else {
+//     // Create the option container and append it to the divElement
+//     var existingContainers = divElement.find('.option-container');
+//     var containerExists = false;
+
+//     existingContainers.each(function () {
+//       if ($(this).find('span').text().trim() === optionText) {
+//         containerExists = true;
+//         return false; // Exit the loop early since the container is found
+//       }
+//     });
+
+//     if (containerExists) {
+//       // Remove the corresponding option container if it is found
+//       existingContainers.filter(function () {
+//         return $(this).find('span').text().trim() === optionText;
+//       }).remove();
+//     } else {
+//       // Create the option container and append it to the divElement
+//       var crossButton = $('<span class="remove-option" style="font-size: 10px;color:white;font-weight: 800;">X</span>');
+//       var optionContainer = $('<li class="option-container" style="display: flex;color:white;gap: 5px;align-items: center;width: auto;background-color: #2196F3;border: 2px solid gray;border-radius: 10px;padding: 8px;font-size:12px;"></li>').css({
+//         display: 'flex',
+//         gap: '5px',
+//         alignItems: 'center'
+//       });
+
+//       crossButton.hover(function () {
+//         $(this).css('color', 'red');
+//       }, function () {
+//         $(this).css('color', 'white');
+//       });
+
+//       optionContainer.append(crossButton);
+//       optionContainer.append($('<span>').text(optionText));
+//       divElement.append(optionContainer);
+//     }
+//   }
+
+
+//   if (selectedOption.is(':selected')) {
+//     $('#fb_indexer_category_select').css('visibility', 'hidden');
+//   }
+
+//   console.log(selectedOptionsText);
+// });
+
+		</script>
+    </body>
+</html>
