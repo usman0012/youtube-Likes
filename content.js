@@ -210,8 +210,7 @@ function scrollDownWithDelay() {
       if (currentScrollPosition + windowHeight >= documentHeight) {
           clearInterval(scrollInterval);
           console.log("Reached the bottom or can't scroll further.");
-      } else {
-        likes()
+          likes();
       }
   }, delay);
 }
