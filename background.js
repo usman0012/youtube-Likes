@@ -26,10 +26,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           console.log('No URLs found in storage.');
       }
     });
-  } else if (request.action === 'startDownload') {
+  } else if (request.action === 'open new url') {
     chrome.tabs.remove(request.tabId, () => {});
     currentIndex+=1;
-    if (currentIndex >= url.length) {
+    if (currentIndex >= urls.length) {
       chrome.storage.local.set({ "uploadedJsonData": ''}, function () {});
       console.log("All urls opened and added the likes successfully");
     } else{

@@ -14,7 +14,6 @@ document.getElementById('jsonFile').addEventListener('change', function(event) {
                 const content = e.target.result; 
                 const parsedContent = JSON.parse(content); 
                 // Save to local storage
-                // localStorage.setItem('uploadedJsonData',JSON.stringify(parsedContent)); 
                 chrome.storage.local.set({ "uploadedJsonData": JSON.stringify(parsedContent) }, function () {});
                 alert('File data stored in local storage!');
             } catch (error) {
@@ -24,8 +23,6 @@ document.getElementById('jsonFile').addEventListener('change', function(event) {
 
         // Read the file
         reader.readAsText(file);
-    } else {
-        // document.getElementById('message').innerText = 'Please upload a file.';
     }
 });
 
